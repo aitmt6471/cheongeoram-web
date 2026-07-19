@@ -62,6 +62,28 @@ export function StaggerGroup({ children, className, id, style }: DivProps) {
   );
 }
 
+export function TapLink({
+  children,
+  className,
+  href,
+}: {
+  children: ReactNode;
+  className?: string;
+  href: string;
+}) {
+  return (
+    <motion.a
+      className={className}
+      href={href}
+      whileHover={{ scale: 1.04 }}
+      whileTap={{ scale: 0.96 }}
+      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+    >
+      {children}
+    </motion.a>
+  );
+}
+
 export function StaggerItem({
   children,
   className,

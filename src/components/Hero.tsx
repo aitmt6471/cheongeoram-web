@@ -1,5 +1,5 @@
 import BeforeAfter from "./BeforeAfter";
-import { StaggerGroup, StaggerItem } from "./motion";
+import { StaggerGroup, StaggerItem, TapLink } from "./motion";
 import { Counter, Marquee } from "./Kinetic";
 import { PhoneIcon } from "./icons";
 
@@ -28,11 +28,11 @@ export default function Hero() {
             </div>
             <div>
               <div className="cta">
-                <a className="btn btn-primary" href="tel:050713173113">
+                <TapLink className="btn btn-primary" href="tel:050713173113">
                   전화 상담 0507-1317-3113
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-                </a>
-                <a className="btn btn-ghost" href="#services">서비스 보기</a>
+                </TapLink>
+                <TapLink className="btn btn-ghost" href="#services">서비스 보기</TapLink>
               </div>
               <p className="hanja">
                 <span className="ch">靑出於藍</span>
