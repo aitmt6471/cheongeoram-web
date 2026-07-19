@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal, StaggerGroup, StaggerItem } from "./motion";
 import {
   AirconIcon, SofaIcon, BedIcon, WasherIcon, HoodIcon, BuildingIcon, PhoneIcon,
@@ -39,7 +40,7 @@ export default function Services() {
               <h3>{s.title}</h3>
               <p className="desc">{s.desc}</p>
               {s.href ? (
-                <a className="tag2" href={s.href}>{s.tag}</a>
+                <Link className="tag2" href={s.href}>{s.tag}</Link>
               ) : (
                 <span className="tag2">{s.tag}</span>
               )}

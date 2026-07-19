@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { PhoneIcon, ChatIcon } from "../icons";
 
 const TEL = "tel:050713173113";
@@ -10,13 +11,13 @@ export function FreshNav({ label, links }: { label: string; links: { href: strin
   return (
     <header className="fr-nav">
       <div className="fr-nav-in">
-        <a className="fr-brand" href="/" aria-label="청어람케어 홈">
+        <Link className="fr-brand" href="/" aria-label="청어람케어 홈">
           <span className="mk">靑</span>
           <span>
             청어람케어
             <small>{label}</small>
           </span>
-        </a>
+        </Link>
         <nav className="fr-nav-links" aria-label="상세 메뉴">
           {links.map((l) => (
             <a key={l.href} href={l.href}>{l.text}</a>
@@ -45,20 +46,20 @@ export function FreshFooter() {
         <div className="fr-foot-cols">
           <div>
             <h4>홈 리빙 케어</h4>
-            <a href="/services/home-care">에어컨 분해세척</a>
-            <a href="/services/home-care">소파·매트리스</a>
-            <a href="/services/home-care">카펫·러그</a>
+            <Link href="/services/home-care">에어컨 분해세척</Link>
+            <Link href="/services/home-care">소파·매트리스</Link>
+            <Link href="/services/home-care">카펫·러그</Link>
           </div>
           <div>
             <h4>설비·현장</h4>
-            <a href="/services/facility-care">세탁기 세척</a>
-            <a href="/services/facility-care">주방후드·렌지</a>
-            <a href="/services/facility-care">상가·산업 현장</a>
+            <Link href="/services/facility-care">세탁기 세척</Link>
+            <Link href="/services/facility-care">주방후드·렌지</Link>
+            <Link href="/services/facility-care">상가·산업 현장</Link>
           </div>
           <div>
             <h4>고객센터</h4>
             <a href={TEL}>0507-1317-3113</a>
-            <a href="/">파주 · 고양(일산) 출장</a>
+            <Link href="/">파주 · 고양(일산) 출장</Link>
             <a href={CHAT} target="_blank" rel="noopener noreferrer">당근 · 채팅 문의</a>
           </div>
         </div>
